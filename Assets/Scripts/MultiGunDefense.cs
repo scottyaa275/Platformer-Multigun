@@ -8,4 +8,15 @@ public class MultiGunDefense : MultiGun
 	public GameObject fireObject;
 	/**What force the object is fired at*/
 	public float firePower = 100f;
+
+	//Required for unity to update the script
+	protected override void Update()
+	{
+		base.Update();
+	}
+
+	protected override void OnPrimaryFireDown()
+	{
+		Instantiate(fireObject, transform.position, transform.rotation);
+	}
 }
