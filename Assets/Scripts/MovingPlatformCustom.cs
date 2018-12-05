@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour 
+public class MovingPlatformCustom : MonoBehaviour 
 {
 	/**Where should this platform end up*/
 	public Vector3 targetPos = new Vector3();
