@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class MovingPlatformCustom : MonoBehaviour 
 {
+	/**The transforms of all the points in sequence*/
+	public Transform[] platformPoints;
+	/**Which position index should this platform move towards*/
+	public int nextPoint = 0;
+	/**is this platform moving forward down the list or backwards*/
+	public bool goingForward = true;
+	/**How many steps does it take for this platform to move to the next one*/
+	public int speed = 10;
+
 	/**Where should this platform end up*/
 	public Vector3 targetPos = new Vector3();
 	/**Where did this platform start*/
@@ -66,5 +75,16 @@ public class MovingPlatformCustom : MonoBehaviour
 		targetPos = temp;
 
 		movingForward = !movingForward;
+	}
+		
+
+	void OnDrawGizmos()
+	{
+		Vector3 prevPos = transform.position;
+		foreach(Transform t in platformPoints)
+		{
+			Debug.DrawLine(prevPos, t.position, Color.green);
+			prevPos = t.position;
+		}
 	}
 }

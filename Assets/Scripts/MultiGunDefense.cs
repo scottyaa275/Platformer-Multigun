@@ -17,6 +17,7 @@ public class MultiGunDefense : MultiGun
 
 	protected override void OnPrimaryFireDown()
 	{
-		Instantiate(fireObject, transform.position, transform.rotation);
+		GameObject fired = Instantiate<GameObject>(fireObject, transform.position, transform.rotation);
+		fired.GetComponent<Rigidbody>().AddForce(transform.forward * firePower);
 	}
 }

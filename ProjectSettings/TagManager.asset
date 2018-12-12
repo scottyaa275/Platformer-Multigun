@@ -6,6 +6,16 @@ TagManager:
   tags:
   - Grapple_Allowed
   - Player_Hurt
+  - NoHitMark
+  - Usable
+  - Metal
+  - Water
+  - Wood
+  - Flesh
+  - gun
+  - Glass
+  - Climbable
+  - Grapple_Zone
   layers:
   - Default
   - TransparentFX
@@ -16,7 +26,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Grappling
   - 
   - 
   - 

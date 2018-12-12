@@ -29,6 +29,7 @@ public class MultiGun : MonoBehaviour
 	}
 
 	//Methods called when the primary or secondary fire is clicked
+	//These are empty by default
 	protected virtual void OnPrimaryFireDown()
 	{
 		
